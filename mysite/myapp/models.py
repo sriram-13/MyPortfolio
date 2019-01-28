@@ -13,7 +13,6 @@ class Experience(models.Model):
 
     def __str__(self):
         return (self.role)
-        
     
 class Responsibility(models.Model):
     exp = models.ForeignKey(Experience, related_name='res_list', on_delete = models.CASCADE)
@@ -21,6 +20,8 @@ class Responsibility(models.Model):
 
     def __str__(self):
         return (self.res)
+
+#------------------------------------------------------------------------------------------------------------------------------------------
 
 class Skillset(models.Model):
     skill_category = models.CharField(max_length = 25)
@@ -35,4 +36,16 @@ class Skills(models.Model):
 
     def __str__(self):
         return (self.skill)
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+class Recommendations(models.Model):
+    name = models.CharField(max_length=30)
+    occupation = models.CharField(max_length=30)
+    recommendation = models.CharField(max_length=500)
+
+    def __str__(self):
+        return (self.name)
+
+#---------------------------------------------------------------------------------------------------------------------------
 
