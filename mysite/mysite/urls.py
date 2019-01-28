@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from myapp.views import recommendations, experience
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('recommendations/', recommendations),
+    path('experience/', experience),
 ]

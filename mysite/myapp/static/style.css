@@ -1,0 +1,203 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    /*border: 1px solid blue;*/
+    padding-bottom: 50px;
+    /*grid-gap: 10px;*/
+
+}
+
+.nav-grid-box {
+    background-color: black;
+    height: 100%;
+}
+
+.logo a {
+    display: block;
+    text-decoration: none;
+    font-family: Harrington;
+    font-size: 80px;
+    text-align: center;
+    background-color: black;
+    color: goldenrod;
+    /*border: 1px solid white;*/
+}
+
+.nav-tabs {
+    margin-top: 100%;
+    margin-bottom: 100%;
+}
+
+.nav-tabs a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    padding: 10px;
+}
+
+.nav-tabs a:hover {
+    background-color: goldenrod;
+    color: white;
+}
+
+#home,
+#contact,
+#skillset,
+#experience,
+#recommendations {
+    background-color: black;
+    color: goldenrod;
+}
+
+footer {
+    /*display: none;*/
+    background-color: goldenrod;
+    color: black;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+}
+
+
+/*-----------------------------------------Start of home main content--------------------------------*/
+
+/*
+.main-section-grid-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+*/
+
+.main-section-grid-box {
+    /*margin: 10px;*/
+    background-color: wheat;
+}
+
+.main-section-grid-box img {
+    width: 100%;
+    height: auto;
+    /*border: 3px solid goldenrod;*/
+}
+
+.main-section-content {
+    /*border: 3px solid goldenrod;*/
+    padding: 10px;
+    background-color: wheat;
+}
+
+.main-section-content h2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Arial;
+}
+
+.main-section-content p {
+    text-align: justify;
+    padding: 20px;
+    font-family: Arial;
+}
+
+/*-------------------------------------------End of home main content---------------------------------------*/
+
+/*------------------------------------------Start of contact main content------------------------------------*/
+
+.contact-grid-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    height: 100%;
+    /*border: 5px solid saddlebrown;*/
+}
+
+#contact-image {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#contact-image img {
+    flex: 100%;
+}
+
+#contact-info {
+    padding: 10px;
+    margin-top: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50%;
+    font-family: Arial;
+}
+
+#contact-info h2 {
+    font-style: italic;
+    color: goldenrod;
+}
+
+/*---------------------------------------------------End of contact main content-------------------------------*/
+
+/*-------------------------------------------Start of skillset main content------------------------------------*/
+
+.skillset-main-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*grid-gap: 1px;*/
+    background-color: wheat;
+}
+
+.skillset-main-grid-box{
+    grid-auto-rows: minmax(auto, 50vh);
+    /*height: 50vh;*/
+    border: 1px solid goldenrod;
+    padding: 2vh 2vw 2vh 2vw;
+}
+
+/*--------------------------------------------End of skillset main content-----------------------------------*/
+
+/*---------------------------------------------Start of experience  main content-----------------------------*/
+
+.experience-main-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: wheat;
+    grid-gap: 1vh;
+    padding: 1vh;
+    font-family: Arial;
+}
+
+.experience-main-grid-box {
+    border: 1px solid goldenrod;
+    padding: 2vh 2vw 2vh 2vw;
+    text-align: justify;
+}
+
+#key {
+    font-weight: bold;
+}
+
+/*------------------------------------------End of experience main content---------------------------------*/
+
+/*------------------------------------------Start of recommendations main content---------------------------*/
+
+.recommendations-main-grid-box{
+    background-color: wheat;
+}
