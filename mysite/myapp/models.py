@@ -21,3 +21,18 @@ class Responsibility(models.Model):
 
     def __str__(self):
         return (self.res)
+
+class Skillset(models.Model):
+    skill_category = models.CharField(max_length = 25)
+
+    def __str__(self):
+        return (self.skill_category)
+
+class Skills(models.Model):
+    skillset = models.ForeignKey(Skillset
+    , related_name='skill_list', on_delete=models.CASCADE)
+    skill = models.CharField(max_lenth=50)
+
+    def __str__(self):
+        return (self.skill)
+
