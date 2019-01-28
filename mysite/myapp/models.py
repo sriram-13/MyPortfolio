@@ -12,7 +12,8 @@ class Experience(models.Model):
     current_company = models.BooleanField()
 
     def __str__(self):
-        return (self.company, self.role)
+        return (self.role)
+        
     
 class Responsibility(models.Model):
     exp = models.ForeignKey(Experience, related_name='res_list', on_delete = models.CASCADE)
