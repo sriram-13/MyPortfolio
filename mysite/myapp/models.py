@@ -31,7 +31,7 @@ class Skillset(models.Model):
 class Skills(models.Model):
     skillset = models.ForeignKey(Skillset
     , related_name='skill_list', on_delete=models.CASCADE)
-    skill = models.CharField(max_lenth=50)
+    skill = models.CharField(max_length=50)
 
     def __str__(self):
         return (self.skill)
