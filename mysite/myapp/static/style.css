@@ -160,8 +160,10 @@ footer {
 .skillset-main-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /*grid-gap: 1px;*/
+    grid-gap: 1vh;
+    padding: 1vh;
     background-color: wheat;
+    font-family: Arial;
 }
 
 .skillset-main-grid-box{
@@ -200,4 +202,22 @@ footer {
 
 .recommendations-main-grid-box{
     background-color: wheat;
+    font-family: Arial;
+}
+
+.recommendations {
+    border: 5px solid goldenrod;
+    border-radius: 5vh;
+    margin: 5vh 3vw;
+    padding: 2vh 2vw;
+    font-size: 3vh;
+}
+
+#recommender-name {
+    text-align: right;
+}
+
+#recommender-occupation {
+    text-align: right;
+    font-style: italic;
 }

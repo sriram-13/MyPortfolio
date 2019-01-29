@@ -48,4 +48,29 @@ class Recommendations(models.Model):
         return (self.name)
 
 #---------------------------------------------------------------------------------------------------------------------------
+"""
+class Contact(models.Model):
+    contact_img = models.ImageField()
+    email = models.EmailField()
+    phone_no = models.CharField(max_length=20)
+    linkedin = models.URLField()
 
+    def __str__(self):
+        return (self.email)
+
+#------------------------------------------------------------------------------------------------------------------------------
+
+class Home(models.Model):
+    wel_message = models.CharField(max_length=50)
+    intro_text = models.TextField()
+
+    def __str__(self):
+        return (self.wel_message)
+
+class HomeImage(models.Model):
+    images = models.ForeignKey(Home, related_name='img_list', on_delete=models.CASCADE)
+    img = models.ImageField()
+
+    def __str__(self):
+        return (self.img)
+"""

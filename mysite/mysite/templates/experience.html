@@ -21,11 +21,11 @@
                         <a href="">SR</a>
                     </div>
                     <div class="nav-tabs">
-                        <a href="http://127.0.0.1:5500/home.html">Home</a>
-                        <a href="http://127.0.0.1:5500/skillset.html">Skill set</a>
+                        <a href="http://127.0.0.1:8000/home/">Home</a>
+                        <a href="http://127.0.0.1:8000/skillset/">Skill set</a>
                         <a href="" id="experience">Experience</a>
-                        <a href="http://127.0.0.1:5500/recommendations.html">Recommendations</a>
-                        <a href="http://127.0.0.1:5500/contact.html">Contact</a>
+                        <a href="http://127.0.0.1:8000/recommendations/">Recommendations</a>
+                        <a href="http://127.0.0.1:8000/contact/">Contact</a>
                     </div>
                 </nav>
             </div>
@@ -62,7 +62,9 @@
                     <div>
                         <p id="key">Responsibilities</p>
                         <ul>
-                            <li>{{ x.res_list.all }}</li>
+                            {% for y in x.res_list.all %}
+                            <li>{{ y.res }}</li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <div>
