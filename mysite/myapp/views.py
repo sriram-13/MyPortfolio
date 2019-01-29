@@ -1,11 +1,12 @@
 from django.shortcuts import render_to_response
-from .models import Experience, Responsibility, Recommendations, Skillset, Skills
+from .models import Experience, Responsibility, Recommendations, Skillset, Skills, Home, HomeImage, Contact
 import datetime
 
 # Create your views here.
 
 def home(request):
-    return render_to_response('home.html')
+    qset = Home.objects.all()
+    return render_to_response('home.html', {'qset': qset})
 
 def skillset(request):
     qset = Skillset.objects.all()
@@ -22,4 +23,5 @@ def experience(request):
 #Add a attribute to Experience model named current_role of type BooleanField from which decision to whether update to_date or not with current date will be made.
 
 def contact(request):
-    return render_to_response('contact.html')
+    qset = Contact.objects.all()
+    return render_to_response('contact.html', {'qset': qset})

@@ -32,13 +32,13 @@
             <div class="main-section-grid-box">
                 <div class="contact-grid-container">
                     <div id="contact-image">
-                        <img src="antique-black-classic-747114.jpg" alt="">
+                        <img src="{% static 'qset.contact_img' %}" alt="">
                     </div>
                     <div id="contact-info">
                         <h2>You can reach me at:</h2>
-                        <p>Email:</p>
-                        <p>LinkedIn:</p>
-                        <p>Phone no:</p>
+                        <p>Email: <span>{{ qset.email }}</span></p>
+                        <p>LinkedIn: <span>{{ qset.linkedin }}</span></p>
+                        <p>Phone no: <span>{{ qset.phone_no }}</span></p>
                     </div>
                 </div>
             </div>

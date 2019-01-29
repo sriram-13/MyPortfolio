@@ -48,9 +48,9 @@ class Recommendations(models.Model):
         return (self.name)
 
 #---------------------------------------------------------------------------------------------------------------------------
-"""
+
 class Contact(models.Model):
-    contact_img = models.ImageField()
+    contact_img = models.ImageField(upload_to='myapp/static/')
     email = models.EmailField()
     phone_no = models.CharField(max_length=20)
     linkedin = models.URLField()
@@ -68,10 +68,10 @@ class Home(models.Model):
 
 class HomeImage(models.Model):
     images = models.ForeignKey(Home, related_name='img_list', on_delete=models.CASCADE)
-    img = models.ImageField()
+    img = models.ImageField(upload_to='myapp/static/')
 
     def __str__(self):
-        return (self.img)
+        return (self.img.url)
 
 class Paragraph(models.Model):
     paragraph = models.ForeignKey(Home, related_name='para_list', on_delete=models.CASCADE)
@@ -79,4 +79,3 @@ class Paragraph(models.Model):
 
     def __str__(self):
         return (self.intro_text)
-"""
