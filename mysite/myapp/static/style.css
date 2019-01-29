@@ -49,10 +49,10 @@ img {
 .nav-tabs a {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: calc(0.75em + 1vmin);
     text-align: center;
     display: block;
-    padding: 10px;
+    padding: 2vh 2vw;
 }
 
 .nav-tabs a:hover {
@@ -108,15 +108,16 @@ footer {
 }
 
 .main-section-content h2 {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0vh 2vw 0vh 2vw;
     font-family: Arial;
+    font-size: 5vh;
 }
 
 .main-section-content p {
     text-align: justify;
-    padding: 20px;
+    padding: 0vh 2vw 0vh 2vw;
     font-family: Arial;
+    font-size: calc(0.75em + 1vmin);
 }
 
 /*-------------------------------------------End of home main content---------------------------------------*/
@@ -211,6 +212,7 @@ footer {
     margin: 5vh 3vw;
     padding: 2vh 2vw;
     font-size: 3vh;
+    text-align: justify;
 }
 
 #recommender-name {

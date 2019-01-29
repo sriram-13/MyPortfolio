@@ -30,15 +30,15 @@
                 </nav>
             </div>
             <div class="main-section-grid-box">
-                <div class="contact-grid-container">
+                <div class="contact-grid-container"> 
                     <div id="contact-image">
-                        <img src="{% static 'qset.contact_img' %}" alt="">
+                        <img src="{% static str3 %}" alt="">
                     </div>
                     <div id="contact-info">
                         <h2>You can reach me at:</h2>
-                        <p>Email: <span>{{ qset.email }}</span></p>
-                        <p>LinkedIn: <span>{{ qset.linkedin }}</span></p>
-                        <p>Phone no: <span>{{ qset.phone_no }}</span></p>
+                        <p>Email: <span>{{ query.email }}</span></p>
+                        <p>LinkedIn: <span>{{ query.linkedin }}</span></p>
+                        <p>Phone no: <span>{{ query.phone_no }}</span></p>
                     </div>
                 </div>
             </div>

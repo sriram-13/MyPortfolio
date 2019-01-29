@@ -23,5 +23,10 @@ def experience(request):
 #Add a attribute to Experience model named current_role of type BooleanField from which decision to whether update to_date or not with current date will be made.
 
 def contact(request):
+    str3 = str()
     qset = Contact.objects.all()
-    return render_to_response('contact.html', {'qset': qset})
+    for x in qset:
+        temp = str(x.contact_img)
+        str1, str2, str3 = temp.split('/')
+        query = x
+    return render_to_response('contact.html', {'query': query, 'str3': str3})
