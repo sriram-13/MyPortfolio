@@ -62,7 +62,6 @@ class Contact(models.Model):
 
 class Home(models.Model):
     wel_message = models.CharField(max_length=50)
-    intro_text = models.TextField()
 
     def __str__(self):
         return (self.wel_message)
@@ -73,4 +72,11 @@ class HomeImage(models.Model):
 
     def __str__(self):
         return (self.img)
+
+class Paragraph(models.Model):
+    paragraph = models.ForeignKey(Home, related_name='para_list', on_delete=models.CASCADE)
+    intro_text = models.TextField()
+
+    def __str__(self):
+        return (self.intro_text)
 """
