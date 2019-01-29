@@ -95,6 +95,14 @@ footer {
     background-color: wheat;
 }
 
+.img-container {
+    position: relative;
+}
+
+.myImages {
+    display: none;
+}
+
 .main-section-grid-box img {
     width: 100%;
     height: auto;
