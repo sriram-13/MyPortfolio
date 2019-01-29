@@ -1,4 +1,4 @@
-var imageIndex = 3;
+var imageIndex = 0;
 showImages();
 
 function showImages() {
