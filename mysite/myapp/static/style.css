@@ -260,6 +260,7 @@ footer {
     .skillset-main-grid-box{
         border: 3px solid goldenrod;
         margin: 5% 20%;
+        grid-gap: 0;
     }
 
     .skillset-main-grid-box h2 {
@@ -269,6 +270,7 @@ footer {
     .experience-main-grid-box {
         border: 3px solid goldenrod;
         margin: 5% 20%;
+        grid-gap: 0;
     }
 
     .recommendations {
