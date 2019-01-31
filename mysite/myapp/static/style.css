@@ -165,7 +165,7 @@ footer {
 }
 
 #contact-info h2 {
-    font-style: italic;
+    font-style: bold;
     color: goldenrod;
 }
 
@@ -259,6 +259,7 @@ footer {
 
     .skillset-main-grid-box{
         border: 3px solid goldenrod;
+        margin: 5% 20%;
     }
 
     .skillset-main-grid-box h2 {
@@ -267,11 +268,13 @@ footer {
 
     .experience-main-grid-box {
         border: 3px solid goldenrod;
+        margin: 5% 20%;
     }
 
     .recommendations {
         border: 3px solid goldenrod;
         border-radius: 0px;
+        margin: 5% 20%;
     }
 
     #contact-info {
@@ -279,6 +282,7 @@ footer {
         margin: 5%;
         font-family: Arial;
         text-align: justify;
+        margin: 5% 20%;
     }
 
 }
