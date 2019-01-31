@@ -41,6 +41,13 @@ img {
     /*border: 1px solid white;*/
 }
 
+#profile-pic {
+    width: 50%;
+    height: 20%;
+    border: 3px solid goldenrod;
+    margin: 20% 25%; 
+}
+
 .nav-tabs {
     margin-top: 100%;
     margin-bottom: 100%;
@@ -236,6 +243,13 @@ footer {
     
     .grid-container, .skillset-main-grid-container, .experience-main-grid-container, .contact-grid-container {
         grid-template-columns: 1fr;
+    }
+
+    #profile-pic {
+        width: 25%;
+        height: 10%;
+        margin: 5% 36%;
+        
     }
 
     .nav-tabs {
