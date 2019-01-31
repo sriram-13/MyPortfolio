@@ -1,64 +1,35 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% block nav %}
+<a href="" id="home">Home</a>
+<a href="http://127.0.0.1:8000/skillset/">Skill set</a>
+<a href="http://127.0.0.1:8000/experience/">Experience</a>
+<a href="http://127.0.0.1:8000/recommendations/">Recommendations</a>
+<a href="http://127.0.0.1:8000/contact/">Contact</a>
+{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <!-- <script src="{% static 'home.js' %}"></script> -->
-    <title>Porfolio</title>
-</head>
-
-<body>
-    <div class="wrapper">
-        <div class="grid-container">
-            <div class="nav-grid-box">
-                <nav>
-                    <div class="logo">
-                        <a href="">SR</a>
-                    </div>
-                    <div id="profile-pic">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Default-welcomer.png" alt="">
-                    </div>
-                    <div class="nav-tabs">
-                        <a href="" id="home">Home</a>
-                        <a href="http://127.0.0.1:8000/skillset/">Skill set</a>
-                        <a href="http://127.0.0.1:8000/experience/">Experience</a>
-                        <a href="http://127.0.0.1:8000/recommendations/">Recommendations</a>
-                        <a href="http://127.0.0.1:8000/contact/">Contact</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="main-section-grid-box">
-                <div class="image-container">
-                    <div class="main-section-image myImages">
-                        <img src="https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-                    </div>
-                    <!-- <div class="main-section-image myImages">
+{% block main %}
+<div class="main-section-grid-box">
+    <div class="image-container">
+        <div class="main-section-image myImages">
+            <img src="https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="">
+        </div>
+        <!-- <div class="main-section-image myImages">
                         <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
                     </div>
                     <div class="main-section-image myImages">
                         <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
                     </div> -->
-                </div>
-                {% for x in qset %}
-                <div class="main-section-content">
-                    <h2>{{ x.wel_message }}</h2>
-                    {% for y in x.para_list.all %}
-                    <p>{{ y.intro_text }}</p>
-                    {% endfor %}
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        <footer>
-            <div>
-                <p>Copyright &copy; Sriram Rajagopal</p>
-            </div>
-        </footer>
     </div>
-</body>
-
-</html>
+    {% for x in qset %}
+    <div class="main-section-content">
+        <h2>{{ x.wel_message }}</h2>
+        {% for y in x.para_list.all %}
+        <p>{{ y.intro_text }}</p>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

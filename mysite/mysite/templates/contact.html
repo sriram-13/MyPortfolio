@@ -1,56 +1,26 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html>
+{% block nav %}
+<a href="http://127.0.0.1:8000/home/">Home</a>
+<a href="http://127.0.0.1:8000/skillset/">Skill set</a>
+<a href="http://127.0.0.1:8000/experience/">Experience</a>
+<a href="http://127.0.0.1:8000/recommendations/">Recommendations</a>
+<a href="" id="contact">Contact</a>
+{% endblock %}
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'style.css' %}" />
-    <script src=""></script>
-</head>
-
-<body>
-    <div class="wrapper">
-        <div class="grid-container">
-            <div class="nav-grid-box">
-                <nav>
-                    <div class="logo">
-                        <a href="">SR</a>
-                    </div>
-                    <div class="nav-tabs">
-                        <a href="http://127.0.0.1:8000/home/">Home</a>
-                        <a href="http://127.0.0.1:8000/skillset/">Skill set</a>
-                        <a href="http://127.0.0.1:8000/experience/">Experience</a>
-                        <a href="http://127.0.0.1:8000/recommendations/">Recommendations</a>
-                        <a href="" id="contact">Contact</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="main-section-grid-box">
-                <div class="contact-grid-container"> 
-                    <div id="contact-image">
-                        <img src="{% static str3 %}" alt="">
-                    </div>
-                    <div id="contact-info">
-                        <h2>You can reach me at:</h2>
-                        <p>Email: <span>{{ query.email }}</span></p>
-                        <p>LinkedIn: <span>{{ query.linkedin }}</span></p>
-                        <p>Phone number: <span>{{ query.phone_no }}</span></p>
-                    </div>
-                </div>
-            </div>
+{% block main %}
+<div class="main-section-grid-box">
+    <div class="contact-grid-container">
+        <div id="contact-image">
+            {% load static %}
+            <img src="{% static str3 %}" alt="">
         </div>
-
-        <footer>
-            <div>
-                <p>Copyright &copy; Sriram Rajagopal</p>
-            </div>
-        </footer>
-
+        <div id="contact-info">
+            <h2>You can reach me at:</h2>
+            <p>Email: <span>{{ query.email }}</span></p>
+            <p>LinkedIn: <span>{{ query.linkedin }}</span></p>
+            <p>Phone number: <span>{{ query.phone_no }}</span></p>
+        </div>
     </div>
-</body>
-
-</html>
+</div>
+{% endblock %}
