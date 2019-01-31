@@ -99,9 +99,9 @@ footer {
     position: relative;
 }
 
-.myImages {
+/* .myImages {
     display: none;
-}
+} */
 
 .main-section-grid-box img {
     width: 100%;
@@ -230,4 +230,41 @@ footer {
 #recommender-occupation {
     text-align: right;
     font-style: italic;
+}
+
+@media (max-width:700px) {
+    
+    .grid-container, .skillset-main-grid-container, .experience-main-grid-container, .contact-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-tabs {
+        margin-top: 5%;
+        margin-bottom: 0;
+    }
+
+    .skillset-main-grid-box{
+        border: 3px solid goldenrod;
+    }
+
+    .skillset-main-grid-box h2 {
+        text-align: center;
+    }
+
+    .experience-main-grid-box {
+        border: 3px solid goldenrod;
+    }
+
+    .recommendations {
+        border: 3px solid goldenrod;
+        border-radius: 0px;
+    }
+
+    #contact-info {
+        padding: 10px;
+        margin: 5%;
+        font-family: Arial;
+        text-align: justify;
+    }
+
 }
