@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.exceptions import ValidationError
+# from validators.utils import 
 import datetime
 
 # Create your models here.
@@ -18,21 +19,17 @@ class Experience(models.Model):
     current_company = models.BooleanField()
     role = models.CharField(max_length = 25)
     current_role = models.BooleanField()
-    from_date = models.DateField(validators=[validate_date])  
+    from_date = models.DateField()  
     #Constraint added to not choose a future date
-    to_date = models.DateField(validators=[validate_date])
+    to_date = models.DateField()
     #Constraint added to not choose a future date
     
-    def validate_date (self, date):
-        if date > datetime.datetime.now().strftime("%x"):
-            raise ValidationError("Future date can't be selected!")
+    # def validate_date (self, date):
+    #     if date > datetime.date.today():
+    #         raise ValidationError("Future date can't be selected!")
     
-    # def present(self):
-    #     if self.current_company == True and self.current_role == True:
-    #         self.to_date = datetime.date.now()
- 
     def __str__(self):
-        return (self.company, self.role)
+        return (self.role)
     
 class Responsibility(models.Model):
     exp = models.ForeignKey(Experience, related_name='res_list', on_delete = models.CASCADE)

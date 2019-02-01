@@ -18,8 +18,25 @@
             <p>{{ x.company }}</p>
         </div>
         <div>
+            <p id="key">Current Company?</p>
+
+            {% if x.current_company == True %}
+            <p>Yes</p>
+            {% else %}
+            <p>No</p>
+            {% endif %}
+        </div>
+        <div>
             <p id="key">Role</p>
             <p>{{ x.role }}</p>
+        </div>
+        <div>
+            <p id="key">Current Role?</p>
+            {% if x.current_role == True %}
+            <p>Yes</p>
+            {% else %}
+            <p>No</p>
+            {% endif %}
         </div>
         <div>
             <p id="key">From</p>
@@ -27,15 +44,10 @@
         </div>
         <div>
             <p id="key">To</p>
-            <p>{{ x.to_date }}</p>
-        </div>
-        <div>
-            <p id="key">Current Company?</p>
-
-            {% if x.current_company == True %}
-            <p>Yes</p>
+            {% if x.current_company == True and x.current_role == True %}
+            <p>{{ current_date }}</p>
             {% else %}
-            <p>No</p>
+            <p>{{ x.to_date }}</p>
             {% endif %}
         </div>
         <div>
@@ -47,9 +59,13 @@
             </ul>
         </div>
         <div>
+            {% if x.awards_list.all %}
             <p id="key">Awards</p>
+            {% endif %}
             <ul>
-                <li>A1</li>
+                {% for y in x.awards_list.all %}
+                <li>{{ y.list }}</li>
+                {% endfor %}
             </ul>
         </div>
     </div>
