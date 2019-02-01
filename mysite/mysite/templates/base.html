@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- <script src="{% static 'home.js' %}"></script> -->
+    <title>Porfolio</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="grid-container">
+            <div class="nav-grid-box">
+                <nav>
+                    <div class="logo">
+                        <a href="">SR</a>
+                    </div>
+                    <div id="profile-pic">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Default-welcomer.png" alt="">
+                    </div>
+                    <div class="nav-tabs">
+                        {% block nav %}
+                        {% endblock %}
+                    </div>
+                </nav>
+            </div>
+            {% block main %}
+            {% endblock %}
+        </div>
+        <footer>
+            <div>
+                <p>Copyright &copy; Sriram Rajagopal</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

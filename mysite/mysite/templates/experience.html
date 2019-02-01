@@ -1,91 +1,60 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html>
+{% block nav %}
+<a href="http://127.0.0.1:8000/home/">Home</a>
+<a href="http://127.0.0.1:8000/skillset/">Skill set</a>
+<a href="" id="experience">Experience</a>
+<a href="http://127.0.0.1:8000/recommendations/">Recommendations</a>
+<a href="http://127.0.0.1:8000/contact/">Contact</a>
+{% endblock %}
+{% block main %}
+<div class="experience-main-grid-container">
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'style.css' %}" />
-    <script src=""></script>
-</head>
+    {% for x in qset %}
 
-<body>
-    <div class="wrapper">
-        <div class="grid-container">
-            <div class="nav-grid-box">
-                <nav>
-                    <div class="logo">
-                        <a href="">SR</a>
-                    </div>
-                    <div class="nav-tabs">
-                        <a href="http://127.0.0.1:8000/home/">Home</a>
-                        <a href="http://127.0.0.1:8000/skillset/">Skill set</a>
-                        <a href="" id="experience">Experience</a>
-                        <a href="http://127.0.0.1:8000/recommendations/">Recommendations</a>
-                        <a href="http://127.0.0.1:8000/contact/">Contact</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="experience-main-grid-container">
-                
-                {% for x in qset %}
-
-                <div class="experience-main-grid-box">
-                    <div>
-                        <p id="key">Company</p>
-                        <p>{{ x.company }}</p>
-                    </div>
-                    <div>
-                        <p id="key">Role</p>
-                        <p>{{ x.role }}</p>
-                    </div>
-                    <div>
-                        <p id="key">From</p>
-                        <p>{{ x.from_date }}</p>
-                    </div>
-                    <div>
-                        <p id="key">To</p>
-                        <p>{{ x.to_date }}</p>
-                    </div>
-                    <div>
-                        <p id="key">Current Company?</p>
-                        
-                            {% if x.current_company == True %}
-                            <p>Yes</p>
-                            {% else %}
-                              <p>No</p>  
-                            {% endif %}      
-                    </div>
-                    <div>
-                        <p id="key">Responsibilities</p>
-                        <ul>
-                            {% for y in x.res_list.all %}
-                            <li>{{ y.res }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <div>
-                        <p id="key">Awards</p>
-                        <ul>
-                            <li>A1</li>
-                        </ul>
-                    </div>
-                </div>
-
-                {% endfor %}
-            </div>
+    <div class="experience-main-grid-box">
+        <div>
+            <p id="key">Company</p>
+            <p>{{ x.company }}</p>
         </div>
+        <div>
+            <p id="key">Role</p>
+            <p>{{ x.role }}</p>
+        </div>
+        <div>
+            <p id="key">From</p>
+            <p>{{ x.from_date }}</p>
+        </div>
+        <div>
+            <p id="key">To</p>
+            <p>{{ x.to_date }}</p>
+        </div>
+        <div>
+            <p id="key">Current Company?</p>
 
-        <footer>
-            <div>
-                <p>Copyright &copy; Sriram Rajagopal</p>
-            </div>
-        </footer>
-
+            {% if x.current_company == True %}
+            <p>Yes</p>
+            {% else %}
+            <p>No</p>
+            {% endif %}
+        </div>
+        <div>
+            <p id="key">Responsibilities</p>
+            <ul>
+                {% for y in x.res_list.all %}
+                <li>{{ y.res }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <p id="key">Awards</p>
+            <ul>
+                <li>A1</li>
+            </ul>
+        </div>
     </div>
-</body>
 
-</html>
+    {% endfor %}
+</div>
+{% endblock %}
