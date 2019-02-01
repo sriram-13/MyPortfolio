@@ -20,7 +20,9 @@
                         <a href="">SR</a>
                     </div>
                     <div id="profile-pic">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Default-welcomer.png" alt="">
+                        {% load static %}
+                        <img src="{% static profilepic %}" alt="">
+                        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Default-welcomer.png" alt=""> -->
                     </div>
                     <div class="nav-tabs">
                         {% block nav %}
