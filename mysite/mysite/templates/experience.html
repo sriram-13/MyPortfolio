@@ -51,7 +51,9 @@
             {% endif %}
         </div>
         <div>
+            {% if x.res_list.all %}
             <p id="key">Responsibilities</p>
+            {% endif %}
             <ul>
                 {% for y in x.res_list.all %}
                 <li>{{ y.res }}</li>

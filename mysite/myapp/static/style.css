@@ -19,10 +19,10 @@ img {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    /*border: 1px solid blue;*/
+    /* border: 1px solid blue; */
     padding-bottom: 50px;
     /*grid-gap: 10px;*/
-
+    height: 100%;
 }
 
 .nav-grid-box {
@@ -34,7 +34,7 @@ img {
     display: block;
     text-decoration: none;
     font-family: Harrington;
-    font-size: 80px;
+    font-size: 5em;
     text-align: center;
     background-color: black;
     color: goldenrod;
@@ -46,6 +46,7 @@ img {
     height: 20%;
     border: 3px solid goldenrod;
     margin: 20% 25%; 
+    padding: 0;
 }
 
 .nav-tabs {
@@ -56,7 +57,7 @@ img {
 .nav-tabs a {
     color: white;
     text-decoration: none;
-    font-size: calc(0.75em + 1vmin);
+    font-size: calc(0.75em + 1.5vmin);
     text-align: center;
     display: block;
     padding: 2vh 2vw;
@@ -85,6 +86,7 @@ footer {
     bottom: 0;
     position: absolute;
     text-align: center;
+    font-size: calc(0.75em + 1vmin);
 }
 
 
@@ -125,7 +127,7 @@ footer {
 .main-section-content h2 {
     padding: 0vh 2vw 0vh 2vw;
     font-family: Arial;
-    font-size: 5vh;
+    font-size: calc(0.75em + 2vmin);
 }
 
 .main-section-content p {
@@ -144,6 +146,7 @@ footer {
     grid-template-columns: 3fr 2fr;
     height: 100%;
     /*border: 5px solid saddlebrown;*/
+    font-size: calc(0.75em + 1vmin);
 }
 
 #contact-image {
@@ -169,6 +172,14 @@ footer {
     color: goldenrod;
 }
 
+#contact-info p {
+    font-weight: bold;
+}
+
+#contact-info span {
+    font-weight: 100;
+}
+
 /*---------------------------------------------------End of contact main content-------------------------------*/
 
 /*-------------------------------------------Start of skillset main content------------------------------------*/
@@ -180,10 +191,11 @@ footer {
     padding: 1vh;
     background-color: wheat;
     font-family: Arial;
+    font-size: calc(0.75em + 1vmin);
 }
 
 .skillset-main-grid-box{
-    grid-auto-rows: minmax(auto, 50vh);
+    grid-auto-rows: minmax(auto , 50vh);
     /*height: 50vh;*/
     border: 1px solid goldenrod;
     padding: 2vh 2vw 2vh 2vw;
@@ -200,6 +212,7 @@ footer {
     grid-gap: 1vh;
     padding: 1vh;
     font-family: Arial;
+    font-size: calc(0.75em + 1vmin);
 }
 
 .experience-main-grid-box {
@@ -226,17 +239,19 @@ footer {
     border-radius: 5vh;
     margin: 5vh 3vw;
     padding: 2vh 2vw;
-    font-size: 3vh;
+    font-size: calc(0.75em + 1vmin);
     text-align: justify;
 }
 
 #recommender-name {
     text-align: right;
+    font-weight: bold;
 }
 
 #recommender-occupation {
     text-align: right;
     font-style: italic;
+    font-weight: bold;
 }
 
 @media (max-width:700px) {
@@ -277,6 +292,7 @@ footer {
         border: 3px solid goldenrod;
         border-radius: 0px;
         margin: 5% 20%;
+        
     }
 
     #contact-info {
