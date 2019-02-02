@@ -22,12 +22,13 @@ img {
     /* border: 1px solid blue; */
     padding-bottom: 50px;
     /*grid-gap: 10px;*/
-    height: 100%;
+    /* height: 100%; */
+    grid-auto-rows: minmax(100vh, auto);
 }
 
 .nav-grid-box {
     background-color: black;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .logo a {
@@ -47,11 +48,6 @@ img {
     border: 3px solid goldenrod;
     margin: 20% 25%; 
     padding: 0;
-}
-
-.nav-tabs {
-    margin-top: 100%;
-    margin-bottom: 100%;
 }
 
 .nav-tabs a {
@@ -91,13 +87,6 @@ footer {
 
 
 /*-----------------------------------------Start of home main content--------------------------------*/
-
-/*
-.main-section-grid-container {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-*/
 
 .main-section-grid-box {
     /*margin: 10px;*/
@@ -172,12 +161,8 @@ footer {
     color: goldenrod;
 }
 
-#contact-info p {
+#tag {
     font-weight: bold;
-}
-
-#contact-info span {
-    font-weight: 100;
 }
 
 /*---------------------------------------------------End of contact main content-------------------------------*/
@@ -197,8 +182,12 @@ footer {
 .skillset-main-grid-box{
     grid-auto-rows: minmax(auto , 50vh);
     /*height: 50vh;*/
-    border: 1px solid goldenrod;
+    border: 3px solid goldenrod;
     padding: 2vh 2vw 2vh 2vw;
+}
+
+.skillset-main-grid-box h2 {
+    text-align: center;
 }
 
 /*--------------------------------------------End of skillset main content-----------------------------------*/
@@ -216,7 +205,7 @@ footer {
 }
 
 .experience-main-grid-box {
-    border: 1px solid goldenrod;
+    border: 3px solid goldenrod;
     padding: 2vh 2vw 2vh 2vw;
     text-align: justify;
 }
@@ -235,7 +224,7 @@ footer {
 }
 
 .recommendations {
-    border: 5px solid goldenrod;
+    border: 3px solid goldenrod;
     border-radius: 5vh;
     margin: 5vh 3vw;
     padding: 2vh 2vw;
@@ -256,7 +245,11 @@ footer {
 
 @media (max-width:700px) {
     
-    .grid-container, .skillset-main-grid-container, .experience-main-grid-container, .contact-grid-container {
+    .grid-container{
+        display: block;
+    }
+
+    .skillset-main-grid-container, .experience-main-grid-container, .contact-grid-container {
         grid-template-columns: 1fr;
     }
 
@@ -264,42 +257,47 @@ footer {
         width: 25%;
         height: 10%;
         margin: 5% 36%;
-        
     }
 
-    .nav-tabs {
-        margin-top: 5%;
-        margin-bottom: 0;
-    }
-
-    .skillset-main-grid-box{
-        border: 3px solid goldenrod;
+    .skillset-main-grid-box {
+        /* border: 3px solid goldenrod; */
         margin: 5% 20%;
         grid-gap: 0;
-    }
-
-    .skillset-main-grid-box h2 {
-        text-align: center;
     }
 
     .experience-main-grid-box {
-        border: 3px solid goldenrod;
+        /* border: 3px solid goldenrod; */
         margin: 5% 20%;
         grid-gap: 0;
     }
 
+    .recommendations-main-grid-box {
+        /* border: 5px solid brown; */
+        display: grid;
+    }
+
     .recommendations {
-        border: 3px solid goldenrod;
+        /* border: 3px solid goldenrod; */
         border-radius: 0px;
         margin: 5% 20%;
-        
     }
 
     #contact-info {
         padding: 10px;
-        margin: 5%;
         font-family: Arial;
         text-align: justify;
+        margin: 5% 20%;
+    }
+
+}
+
+@media (min-width:700px) and (max-width:1000px) {
+    
+    .contact-grid-container{
+        grid-template-columns: 1fr;
+    }
+
+    #contact-info {
         margin: 5% 20%;
     }
 
